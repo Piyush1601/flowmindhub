@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Services - FlowMindHub{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-3">Our Services</h1>
+                <p class="lead">Comprehensive digital solutions to transform your business operations</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            {% for service in services %}
+            <div class="col-lg-6">
+                <div class="service-detail-card h-100 p-4 border rounded-3 shadow-sm">
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="service-icon-large me-4">
+                            <i class="{{ service[3] }} fa-3x text-primary"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h3 class="fw-bold mb-2">{{ service[1] }}</h3>
+                            <div class="price-badge mb-3">
+                                <span class="badge bg-success fs-6">{{ service[4] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-muted mb-4">{{ service[2] }}</p>
+                    
+                    <h6 class="fw-bold mb-3">Key Features:</h6>
+                    <ul class="list-unstyled">
+                        {% for feature in service[5].split(', ') %}
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>{{ feature }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <a href="{{ url_for('contact') }}" class="btn btn-primary me-3">
+                            <i class="fas fa-envelope me-2"></i>Get Quote
+                        </a>
+                        <a href="{{ url_for('portfolio') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-eye me-2"></i>View Examples
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-3">Our Process</h2>
+                <p class="lead text-muted">We follow a structured approach to ensure successful project delivery.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">1</span>
+                    </div>
+                    <h5 class="fw-bold mb-3">Discovery</h5>
+                    <p class="text-muted">We analyze your requirements and understand your business goals.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">2</span>
+                    </div>
+                    <h5 class="fw-bold mb-3">Planning</h5>
+                    <p class="text-muted">We create a detailed project plan with timelines and milestones.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">3</span>
+                    </div>
+                    <h5 class="fw-bold mb-3">Development</h5>
+                    <p class="text-muted">Our team builds your solution with regular updates and feedback.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                        <span class="fw-bold">4</span>
+                    </div>
+                    <h5 class="fw-bold mb-3">Launch</h5>
+                    <p class="text-muted">We deploy your solution and provide ongoing support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Stack -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-3">Technologies We Use</h2>
+                <p class="lead text-muted">We leverage cutting-edge technologies to build robust and scalable solutions.</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="tech-category text-center p-4 border rounded-3">
+                    <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                    <h5 class="fw-bold mb-3">Web Development</h5>
+                    <div class="tech-tags">
+                        <span class="badge bg-light text-dark me-2 mb-2">Python</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Flask</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">JavaScript</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">React</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">HTML5</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">CSS3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tech-category text-center p-4 border rounded-3">
+                    <i class="fas fa-robot fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold mb-3">Automation</h5>
+                    <div class="tech-tags">
+                        <span class="badge bg-light text-dark me-2 mb-2">N8N</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Zapier</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Python</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">APIs</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Webhooks</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">SQLite</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tech-category text-center p-4 border rounded-3">
+                    <i class="fas fa-brain fa-3x text-warning mb-3"></i>
+                    <h5 class="fw-bold mb-3">AI & Video</h5>
+                    <div class="tech-tags">
+                        <span class="badge bg-light text-dark me-2 mb-2">OpenAI</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">DALL-E</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Video AI</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Image Processing</span>
+                        <span class="badge bg-light text-dark me-2 mb-2">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3 class="fw-bold mb-2">Ready to Get Started?</h3>
+                <p class="mb-0">Contact us today to discuss your project requirements and get a customized quote.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg">
+                    <i class="fas fa-phone me-2"></i>Contact Us Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowMindHub - Digital Solutions & Automation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            border-bottom: 2px solid #e74c3c;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ffc107;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .services {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #198754;
+            margin-bottom: 1rem;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .text-warning {
+            color: #ffc107 !important;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="/" class="logo">🧠 FlowMindHub</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Business with <span class="text-warning">Smart Automation</span></h1>
+            <p>We create custom websites, automation workflows, and AI-powered solutions to streamline your operations and boost productivity.</p>
+            <div>
+                <a href="/contact" class="btn">🚀 Get Started</a>
+                <a href="/portfolio" class="btn btn-outline">👁️ View Our Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Website Development</h3>
+                    <p>Custom websites for NGOs, businesses, and organizations with modern design and functionality</p>
+                    <div class="price">$500 - $5000</div>
+                    <a href="/services" class="btn">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>Automation Solutions</h3>
+                    <p>N8N workflows and automation tools to streamline business processes and reduce manual work</p>
+                    <div class="price">$300 - $3000</div>
+                    <a href="/services" class="btn">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎥</div>
+                    <h3>AI Video Creation</h3>
+                    <p>AI-powered video ads and UGC content creation using static catalog images</p>
+                    <div class="price">$200 - $1500</div>
+                    <a href="/services" class="btn">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🧾</div>
+                    <h3>Bill Management</h3>
+                    <p>Automated billing and inventory tracking systems like EasyBillGen</p>
+                    <div class="price">$400 - $4000</div>
+                    <a href="/services" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FlowMindHub. All rights reserved.</p>
+            <p>Transform your business with smart automation solutions.</p>
+        </div>
+    </footer>
+</body>
+</html>
